@@ -98,6 +98,4 @@ Bank_App.postman_collection.json is the exported collection containing REST requ
 
 1. First 12 requests can be run straightway. These will help in populating the DB and some sanity testing.
 2. 13th request onwards, there will be transfers and it is recommended to run them one after another and also advised to read the description.
-3. There is a Junit test as well `TestAccountHandlerService` written to write some test scenarios for hte transfer functionality.
-
-2. 
+3. There is a Junit test as well `TestAccountHandlerService` written to write some test scenarios for the transfer functionality.
