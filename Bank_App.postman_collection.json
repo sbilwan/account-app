@@ -1,0 +1,684 @@
+{
+	"info": {
+		"_postman_id": "5f2f8ba1-7dfe-4a1d-8200-20416bb3ce6c",
+		"name": "Bank_App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Client- Penelope",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Penelope\",\n\t\"surname\": \"Darcy\",\n\t\"primary_address\": \"12-LondonRoad-Cambridge-UK\",\n\t\"secondary_address\": \"12-HillsRoad-Oxford-UK\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client- Robert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Robert\",\n\t\"surname\": \"Dyas\",\n\t\"primary_address\": \"14-LondonRoad-Cambridge-UK\",\n\t\"secondary_address\": \"14-HillsRoad-Oxford-UK\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client- Kate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Kate\",\n\t\"surname\": \"Board\",\n\t\"primary_address\": \"16-LondonRoad-Cambridge-UK\",\n\t\"secondary_address\": \"16-HillsRoad-Oxford-UK\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client- Jonas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Jonas\",\n\t\"surname\": \"Mikel\",\n\t\"primary_address\": \"16-LondonRoad-Cambridge-UK\",\n\t\"secondary_address\": \"18-HillsRoad-Oxford-UK\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Current Account - Penelope",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"balance\": 1000,\n\t\"type\": \"CURRENT\",\n\t\"status\": \"CR\",\n\t\"overdraw_limit\": 300\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Savings Account - Robert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"balance\": 3000,\n\t\"type\": \"SAVINGS\",\n\t\"status\": \"CR\",\n\t\"overdraw_limit\": 500\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Current Account - Kate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"balance\": 5000,\n\t\"type\": \"CURRENT\",\n\t\"status\": \"CR\",\n\t\"overdraw_limit\": 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Current Account - Jonas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"balance\": 2500,\n\t\"type\": \"CURRENT\",\n\t\"status\": \"CR\",\n\t\"overdraw_limit\": 200\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a client by id - 4 ( jonas )",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/clients/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"clients",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the account details of a client by id - 3 ( kate )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Savings Account - Kate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"balance\": 400,\n\t\"type\": \"SAVINGS\",\n\t\"status\": \"CR\",\n\t\"overdraw_limit\": 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer between two accounts in CR status  - Client id 3 ( kate )",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"debit_account_id\": 3,\n\t\"credit_account_id\":  5,\n\t\"amount\": 500,\n\t\"message\": \"Monthly Savings\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3",
+						"transfer"
+					]
+				},
+				"description": "The request is for transfer money between wto accounts of kate. Transfer is between two accounts in CR balance. Money will be taken from one account ( id 3 ) and will be saved in account ( 5 )."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the account details of a client by id after transfer - 3 ( kate )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer between two accounts where Account Id 5 will be in DR status after transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"debit_account_id\": 5,\n\t\"credit_account_id\":  1,\n\t\"amount\": 1000,\n\t\"message\": \"Long term debt paid to Penelope\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3",
+						"transfer"
+					]
+				},
+				"description": "kate is paying from accid 5 and will draw money from her overdrawn balance. Thus the accid 5 will be in DR status."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the account details Kate after transfer -  id 3 ( kate ) ( DR balance )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3"
+					]
+				},
+				"description": "Note that account id is in DR balance after the transfer."
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer between two accounts when source account has maxed the overdrawm limit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"debit_account_id\": 5,\n\t\"credit_account_id\":  1,\n\t\"amount\": 50,\n\t\"message\": \"Interest for the long term debt\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3",
+						"transfer"
+					]
+				},
+				"description": "The transfer request will be rejected as kate has reached the max limit of overdrawn  balance and can't do any more debit operation from this account."
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer to accoubt in DR status and DR balance decreases",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"debit_account_id\": 3,\n\t\"credit_account_id\":  5,\n\t\"amount\": 50,\n\t\"message\": \"Montly Saving\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3",
+						"transfer"
+					]
+				},
+				"description": "kate is transferring from her current account to savings account that maxed out its limit. The transfer will decrease the debit balance but will still be in  DR status."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the account details Kate after transfer -  id 3 ( kate ) ( DR balance decreases )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3"
+					]
+				},
+				"description": "Note that the accountid 5 balance is now 50 DR changed from 100 DR after the transfer."
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer to account in DR status and DR balance changes to CR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"debit_account_id\": 3,\n\t\"credit_account_id\":  5,\n\t\"amount\": 50,\n\t\"message\": \"next Montly Saving\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3",
+						"transfer"
+					]
+				},
+				"description": "kate has transferred the money drawn from her overdrawn balance abd paid the bank back all the loan and now her balance is in CR status."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the account details Kate after transfer -  id 3 ( kate ) ( DR  to  CR)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/clients/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"clients",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all the transactions of an account by id - 5 ( kate savings account )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/demoaccountapp/v1/accounts/5/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demoaccountapp",
+						"v1",
+						"accounts",
+						"5",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
